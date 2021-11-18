@@ -20,7 +20,7 @@ This documentation explains about how to update Global Pull Secret in Openshift 
 
 5. Choose `Add credentials` menu
 
-<img src="images/image1.png">
+<img src="images/image2.png">
 
 
 ## Enter credentials
@@ -34,7 +34,9 @@ This documentation explains about how to update Global Pull Secret in Openshift 
 
 7. Click on `save` button.
 
-Global pull secrets 
+<img src="images/image3.png">
+
+Global pull secrets got updated with ibm entitlement key.
 
 ## Reload the worker nodes
 
@@ -51,5 +53,7 @@ Worker nodes to be be reloaded for the pull secrets to reflect.
 12. Click on `Reload` menu and wait until it get reloaded and the status become `Normal`. Reload process may take 5 to 10 minutes per node.
 
 13. Repeat the steps from 11 for each node.
+
+<img src="images/image4.png">
 
 
