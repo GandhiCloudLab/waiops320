@@ -1,6 +1,6 @@
 # Watson AIOps 3.2.0 installation and demo setup requirements.
 
-This documentation explains about the Hardware and account requirements for for Watson AIOps 3.2.0 installation and demo setup.
+This documentation explains about the Hardware and account requirements for Watson AIOps 3.2.0 installation and demo setup.
 
 ## 1. RedHat Openshift on IBM Cloud
 
@@ -10,7 +10,7 @@ A RedHat Openshift on IBM Cloud (ROKS) with the below configuration needed to in
  - 5 Nodes with b3c.16x64 flavour. (CPU 16 core, Memory 64 GB)
  - Classic Infrastructure
 
- Here is a reference values and steps for install [install](../50-install-roks).
+ Here is a reference values and steps for [install](../50-install-roks).
 
 ## 2. IKS Cluster on IBM Cloud
 
@@ -45,4 +45,4 @@ A ServiceNow account is required or atleast Developer instance to be created usi
 
 https://developer.servicenow.com/dev.do#!/guides/paris/developer-program/pdi-guide/obtaining-a-pdi
 
-Watson AIOps can create Incidents in ServiceNow apart from slack story. It also train the existing incidents from ServiceNow for identifying the Similar Incidents and to choose the next best action, in case of an incident.
+Watson AIOps can create Incidents in ServiceNow apart from slack story. Also it can train the existing incidents from ServiceNow for identifying the Similar Incidents and to choose the next best action, in case of an incident.

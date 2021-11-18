@@ -4,9 +4,9 @@ This documentation explains about the RedHat Openshift install on IBM Cloud (ROK
 
 ## Open Create Clusters Screen
 
-1. Goto http://Cloud.ibm.com
+1. Goto http://cloud.ibm.com
 
-2. Choose the menu/buttons Openshif > Clusters > Create Clusters
+2. Choose the menu/buttons `Openshift > Clusters > Create Clusters`
 
 <img src="images/image-00001.png">
 
@@ -46,6 +46,8 @@ This documentation explains about the RedHat Openshift install on IBM Cloud (ROK
 
 14. Enter some value in  `cluster name`
 
+15. Click on `Create` button
+
 <img src="images/image-00005.png">
 
-15. Click on `Create` button
+It would start creating a cluster for you. It may take 30 minutes to complete.
