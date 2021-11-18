@@ -18,7 +18,7 @@ This documentation explains about how to update Global Pull Secret in Openshift 
 
 <img src="images/image1.png">
 
-5. Choose `Add credentials` menu
+5. Click on `Add credentials` menu
 
 <img src="images/image2.png">
 
@@ -44,7 +44,7 @@ Worker nodes to be be reloaded for the pull secrets to reflect.
 
 8. Goto http://cloud.ibm.com
 
-9. Choose the your OCP cluster
+9. Choose your OCP cluster
 
 10. Click on `Worker Nodes`
 
