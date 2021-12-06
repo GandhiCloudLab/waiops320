@@ -30,10 +30,10 @@ APP_URL=http://1.1.1.1:31010/productpage?u=normal
 
 #### 4. Namespace
 
-Update the NAMESAPCE property, with namespace where the aiops is installed.
+Update the NAMESAPCE_APP property, with namespace where the bookinfo apps is installed is installed.
 
 ```
-NAMESAPCE=aiops31
+NAMESAPCE_APP=bookinfo
 ```
 
 ## 2. Run the demo
