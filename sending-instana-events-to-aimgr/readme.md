@@ -80,6 +80,12 @@ Put the load in the application to generate the Instana event and see the event 
 <img src="images/image5.png">
 
 
+#### 8. Sample Events
+
+- Instana Event :  [files/instana-event.json](./files/instana-event.json)
+- Converted NOI Event :  [files/noi-event.json](./files/noi-event.json)
+
+
 ### Note
 
 This is `WAIOps Hub` is intended for POC.
