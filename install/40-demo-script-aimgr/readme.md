@@ -30,7 +30,7 @@ APP_URL=http://1.1.1.1:31010/productpage?u=normal
 
 #### 4. Namespace
 
-Update the NAMESAPCE_APP property, with namespace where the bookinfo apps is installed is installed.
+Update the NAMESAPCE_APP property, with namespace where the bookinfo apps is installed.
 
 ```
 NAMESAPCE_APP=bookinfo
