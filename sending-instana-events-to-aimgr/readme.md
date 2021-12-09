@@ -6,21 +6,19 @@ This document explains about how to send Instana Events directly to WAIOps 3.2.0
 ## 1. Process
 
 1. A Microservice called `WAIOps Hub` to be installed in WAIOps cluster.
-2. Instana can send alers to `WAIOps Hub` via Webhook
-3. This `WAIOps Hub` will convert the instana events to NOI events and push the event to NOI Kafka topic in AIMgr
+2. Instana can send alers to `WAIOps Hub` via Webhook.
+3. This `WAIOps Hub` will convert the instana events to NOI events and push the events to NOI Kafka topic in AIMgr.
 4. AIMgr will process the event and create Alerts.
 
 <img src="images/image1.png">
 
 ## 2. Installation
 
-The `WAIOps Hub` can be installed via the script [files/deploy-waiops-hub.sh](./files/deploy-waiops-hub.sh)
-
-Here are the steps.
+The `WAIOps Hub` can be installed via the script [files/deploy-waiops-hub.sh](./files/deploy-waiops-hub.sh). Here are the steps.
 
 #### 1. Update NAMESPACE property
 
-In the above file, update the below property to point to WAIOps AIMgr installed namespace
+In the above script file, update the below property to point to WAIOps AIMgr installed namespace
 
 ```
 NAMESPACE=cp4waiops
@@ -85,8 +83,15 @@ Put the load in the application to generate the Instana event and see the event 
 - Instana Event :  [files/instana-event.json](./files/instana-event.json)
 - Converted NOI Event :  [files/noi-event.json](./files/noi-event.json)
 
+## 3. ReInstall and Remove
 
-### Note
+To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-hub-ns`.
+
+```
+oc delete ns waiops-hub-ns
+```
+
+## 4. Note
 
 This is `WAIOps Hub` is intended for POC.
 
