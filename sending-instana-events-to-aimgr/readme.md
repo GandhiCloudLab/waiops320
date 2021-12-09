@@ -5,12 +5,12 @@ This document explains about how to send Instana Events directly to WAIOps 3.2.0
 
 ## 1. Process
 
-<img src="images/image1.png">
-
-1. A microservice called `WAIOps Hub` to be installed in WAIOps cluster.
+1. A Microservice called `WAIOps Hub` to be installed in WAIOps cluster.
 2. Instana can send alers to `WAIOps Hub` via Webhook
-3. This hub will convert the instana events to NOI events and push the event to NOI Kafka topic in AIMgr
-4. AIMgr will process the event and create Alert.
+3. This `WAIOps Hub` will convert the instana events to NOI events and push the event to NOI Kafka topic in AIMgr
+4. AIMgr will process the event and create Alerts.
+
+<img src="images/image1.png">
 
 ## 2. Installation
 
@@ -89,3 +89,6 @@ Put the load in the application to generate the Instana event and see the event 
 ### Note
 
 This is `WAIOps Hub` is intended for POC.
+
+
+
