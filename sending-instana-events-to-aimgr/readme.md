@@ -70,8 +70,15 @@ Create Instana `alert` for the corresponding Event and select the above created 
 <img src="images/image3.png">
 <img src="images/image4.png">
 
+#### 7. Create Custom Payload for NodeAlias
 
-#### 7. Generate the event and see the Alert in AIMgr AlertViewer.
+Create custom payload in Isntana for the NodeAlias field.
+
+<img src="images/image6.png">
+
+More details about this in : https://github.com/ibm-gsi-ecosystem/watson-ai-ops-instana/tree/main/3-custom-payload
+
+#### 8. Generate the event and see the Alert in AIMgr AlertViewer.
 
 Put the load in the application to generate the Instana event and see the event is created as alert in `Alert Viewer`.
 
