@@ -84,11 +84,11 @@ Put the load in the application to generate the Instana event and see the event 
 
 #### Instana Event
 
-- Instana Event :  [files/instana-event.json](./files/1-instana-event-open.json)
+- Instana Event :  [files/1-instana-event-open.json](./files/1-instana-event-open.json)
 
 #### NOI Event
 
-- Converted NOI Event :  [files/noi-event.json](./files/1-noi-event-open.json)
+- Converted NOI Event :  [files/1-noi-event-open.json](./files/1-noi-event-open.json)
 
 #### Mapping
 
@@ -99,11 +99,11 @@ Put the load in the application to generate the Instana event and see the event 
 
 #### Instana Event
 
-- Instana Event :  [files/instana-event.json](./files/2-instana-event-close.json)
+- Instana Event :  [files/2-instana-event-close.json](./files/2-instana-event-close.json)
 
 #### NOI Event
 
-- Converted NOI Event :  [files/noi-event.json](./files/2-noi-event-close.json)
+- Converted NOI Event :  [files/2-noi-event-close.json](./files/2-noi-event-close.json)
 
 #### Mapping
 
