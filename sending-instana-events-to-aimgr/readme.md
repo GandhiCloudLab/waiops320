@@ -109,8 +109,11 @@ Put the load in the application to generate the Instana event and see the event 
 
 <img src="images/2-mapping-close.png">
 
+## 4. NOI Event to Alert Viewer Mapping
 
-## 4. ReInstall and Remove
+<img src="images/3-mapping-noi-to-alertviewer.png">
+
+## 5. ReInstall and Remove
 
 To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-hub-ns`.
 
@@ -118,7 +121,7 @@ To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-
 oc delete ns waiops-hub-ns
 ```
 
-## 5. Note
+## 6. Note
 
 This is `WAIOps Hub` is intended for POC.
 
