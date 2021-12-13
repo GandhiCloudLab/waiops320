@@ -1,0 +1,27 @@
+{
+    "issue": {
+      "id": "5z68yB-PTPO99nLaLImqNw11",
+      "type": "incident",
+      "state": "OPEN",
+      "start": 1638989450000,
+      "severity": 10,
+      "text": "CreditScore memory higher issue",
+      "suggestion": "CreditScore memory higher issue",
+      "link": "https://1.1.1.1.nip.io/#/events;eventId=5z68yB-PTPO99nLaLImqNw?&timeline.ws=600000&timeline.to=1638989750000&timeline.fm=1638989450000&incidentId=5z68yB-PTPO99nLaLImqNw&incidentTo=1638989455000",
+      "customZone": "ilender-zone",
+      "availabilityZone": "not available",
+      "zone": "ilender-zone",
+      "fqdn": "kube-bvqsvmod0125spct9av0-myclusterai-default-000001d0.iks.ibm",
+      "entity": "JVM",
+      "entityLabel": "creditscoreservice 0.0.1-SNAPSHOT",
+      "tags": "",
+      "container": "not available",
+      "service": "not available",
+      "containerNames": [],
+      "customPayloads": {
+        "custom:NodeAlias": [
+          "ilender-creditscore-54885c6f85-6z4gw"
+        ]
+      }
+    }
+  }

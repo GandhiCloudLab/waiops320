@@ -78,13 +78,39 @@ Put the load in the application to generate the Instana event and see the event 
 <img src="images/image5.png">
 
 
-#### 8. Sample Events
+## 3. Events and Mapping
 
-- Instana Event :  [files/instana-event.json](./files/instana-event.json)
-- Converted NOI Event :  [files/noi-event.json](./files/noi-event.json)
+### 3.1 Events Status : Open
+
+#### Instana Event
+
+- Instana Event :  [files/instana-event.json](./files/1-instana-event-open.json)
+
+#### NOI Event
+
+- Converted NOI Event :  [files/noi-event.json](./files/1-noi-event-open.json)
+
+#### Mapping
+
+<img src="images/1-mapping-open.png">
 
 
-## 3. ReInstall and Remove
+### 3.2 Events Status : Close
+
+#### Instana Event
+
+- Instana Event :  [files/instana-event.json](./files/2-instana-event-close.json)
+
+#### NOI Event
+
+- Converted NOI Event :  [files/noi-event.json](./files/2-noi-event-close.json)
+
+#### Mapping
+
+<img src="images/2-mapping-close.png">
+
+
+## 4. ReInstall and Remove
 
 To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-hub-ns`.
 
@@ -92,7 +118,7 @@ To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-
 oc delete ns waiops-hub-ns
 ```
 
-## 4. Note
+## 5. Note
 
 This is `WAIOps Hub` is intended for POC.
 

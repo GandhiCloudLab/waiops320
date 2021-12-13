@@ -1,0 +1,12 @@
+{
+    "EventId": "1S2EKHVISYaRCj1ByrZlRA",
+    "Node": "",
+    "NodeAlias": "",
+    "Manager": "Instana",
+    "AlertGroup": "Availability",
+    "AlertKey": "ServiceDown",
+    "Type": 2,
+    "NetcoolEventAction": "update",
+    "FirstOccurrence": "1638857047",
+    "LastOccurrence": "1638857047"
+}
