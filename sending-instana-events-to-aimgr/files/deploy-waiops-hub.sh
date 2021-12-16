@@ -11,9 +11,13 @@ NAMESPACE_HUB=waiops-hub-ns
 ## KAFKA Topic to push Instana events as NOI events
 NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 
+## Allow Instana events with severity from and to
+FILTER_SEVERITY_FROM=1
+FILTER_SEVERITY_TO=1000
+
 ### -----------------------------------------------------
 
-TRUSTSTORE_PASSWORD=waiops-hub-passss
+TRUSTSTORE_PASSWORD=mystorekeypass
 JKS_FILENAME=waiops-hub-keystore.jks
 CRT_FILENAME=waiops-hub-ca.crt
 SASL_USERNAME=cp4waiops-cartridge-kafka-auth
@@ -35,10 +39,12 @@ keytool -import -noprompt -alias alias -file $CRT_FILENAME -keypass wahubkeypass
 oc create ns $NAMESPACE_HUB
 
 ### create secret for jks
+oc delete secret waiops-hub-secret -n $NAMESPACE_HUB 
 oc create secret generic -n $NAMESPACE_HUB waiops-hub-secret --from-file=truststore.jks=$JKS_FILENAME
 
 ### create configmap
-oc create configmap -n $NAMESPACE_HUB waiops-hub-configmap --from-literal=noiKafkaTopic=$NOI_KAFKA_TOPIC --from-literal=noiKafkaServerUrl=$BROKER --from-literal=noiKafkaTruststoreLocation=/opt/secret-volume/truststore.jks --from-literal=noiKafkaTruststorePassword=$TRUSTSTORE_PASSWORD  --from-literal=noiKafkaSCRAMUserName=$SASL_USERNAME  --from-literal=noiKafkaSCRAMPassword=$SASL_PASSWORD  
+oc delete configmap waiops-hub-configmap -n $NAMESPACE_HUB 
+oc create configmap -n $NAMESPACE_HUB waiops-hub-configmap --from-literal=noiKafkaTopic=$NOI_KAFKA_TOPIC --from-literal=noiKafkaServerUrl=$BROKER --from-literal=noiKafkaTruststoreLocation=/opt/secret-volume/truststore.jks --from-literal=noiKafkaTruststorePassword=$TRUSTSTORE_PASSWORD  --from-literal=noiKafkaSCRAMUserName=$SASL_USERNAME  --from-literal=noiKafkaSCRAMPassword=$SASL_PASSWORD --from-literal=filterSeverityFrom=$FILTER_SEVERITY_FROM  --from-literal=filterSeverityTo=$FILTER_SEVERITY_TO  
 
 ### delete the temp files...
 ls -l
@@ -78,7 +84,7 @@ spec:
             path: truststore.jks          
       containers:
         - name: cont-waiops-hub-core
-          image: "gandigit/waiops-hub-core:0.0.1"
+          image: "gandigit/waiops-hub-core:0.0.2"
           imagePullPolicy: Always
           ports:
             - name: my-http
@@ -128,6 +134,9 @@ spec:
   port:
     targetPort: my-http
 EOF
+
+## Delete the pods with the name "waiops-hub-core"
+oc get pods -n $NAMESPACE_HUB  --no-headers=true | awk '/waiops-hub-core/{print $1}'| xargs  oc delete  -n $NAMESPACE_HUB pod
 
 ## Print the Webhook URL
 export URL=$(oc get routes waiops-hub-core -n $NAMESPACE_HUB -o=jsonpath='{.status.ingress[0].host}{"\n"}')

@@ -32,14 +32,25 @@ Update the below property to point to NOI Kafka topic that is created in AIMgr.
 NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 ```
 
-#### 3. Login into OCP Cluster
+
+#### 3. Update FILTER_SEVERITY_FROM and FILTER_SEVERITY_TO property
+
+Update the below properties to process only the instana events that contains the severity in the below range.
+
+```
+FILTER_SEVERITY_FROM=1
+FILTER_SEVERITY_TO=1000
+```
+
+
+#### 4. Login into OCP Cluster
 
 Login into the OCP Cluster where WAIOps AIMgr is installed 
 ```
 oc login ....
 ```
 
-#### 4. Install the WAIOps Hub
+#### 5. Install the WAIOps Hub
 
 Run the script to install the WAIOps Hub microservice.
 
@@ -55,22 +66,21 @@ WebHook URL : http://waiops-hub-core-waiops-hub-ns.aiops-320-4c84f197-0000.eu-de
 
   ================================================================
 
-
-#### 5. Create Instana Alert Channel
+#### 6. Create Instana Alert Channel
 
 Create Instana alert channel with webhook and give the above printed url.
 
 <img src="images/image2.png">
 
 
-#### 6. Create Instana Alert
+#### 7. Create Instana Alert
 
 Create Instana `alert` for the corresponding Event and select the above created `Alert Channel`
 
 <img src="images/image3.png">
 <img src="images/image4.png">
 
-#### 7. Create Custom Payload for NodeAlias
+#### 8. Create Custom Payload for NodeAlias
 
 Create custom payload in Isntana for the NodeAlias field.
 
@@ -78,12 +88,15 @@ Create custom payload in Isntana for the NodeAlias field.
 
 More details about this in : https://github.com/ibm-gsi-ecosystem/watson-ai-ops-instana/tree/main/3-custom-payload
 
-#### 8. Generate the event and see the Alert in AIMgr AlertViewer.
+#### 9. Generate the event and see the Alert in AIMgr AlertViewer.
 
 Put the load in the application to generate the Instana event and see the event is created as alert in `Alert Viewer`.
 
 <img src="images/image5.png">
 
+
+-----------
+-----------
 
 ## 3. Events and Mapping
 
