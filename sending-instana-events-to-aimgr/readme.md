@@ -34,7 +34,7 @@ NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 
 #### 3. Severity Filter property (Optional)
 
-This property is helps to process only the instana events that contains the severity in the below range.
+This property is helps to process only the instana events that contains the severity in the given range.
 
 This is optional and leave the below default values as it is to skip the severity filter.
 
