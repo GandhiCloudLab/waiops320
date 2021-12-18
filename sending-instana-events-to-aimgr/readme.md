@@ -32,20 +32,24 @@ Update the below property to point to NOI Kafka topic that is created in AIMgr.
 NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 ```
 
+#### 3. Severity Filter property (Optional)
 
-#### 3. Update Severity Filter property
+This property is helps to process only the instana events that contains the severity in the below range.
 
-Update the below property to `true` to apply severity filter.
+This is optional and leave the below default values as it is to skip the severity filter.
+
 ```
 FILTER_SEVERITY_ENABLED=false
-```
-
-If the above property is enabled, then update the below properties to process only the instana events that contains the severity in the below range.
-
-```
 FILTER_SEVERITY_FROM=1
 FILTER_SEVERITY_TO=1000
 ```
+
+If you want to enable the severity filter, you can modify them.
+
+- FILTER_SEVERITY_ENABLED - true 
+- FILTER_SEVERITY_FROM - Severity start value 
+- FILTER_SEVERITY_TO - Severity end value 
+
 
 #### 4. Login into OCP Cluster
 
