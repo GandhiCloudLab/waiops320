@@ -12,6 +12,7 @@ NAMESPACE_HUB=waiops-hub-ns
 NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 
 ## Allow Instana events with severity from and to
+FILTER_SEVERITY_ENABLED=false
 FILTER_SEVERITY_FROM=1
 FILTER_SEVERITY_TO=1000
 
@@ -44,7 +45,7 @@ oc create secret generic -n $NAMESPACE_HUB waiops-hub-secret --from-file=trustst
 
 ### create configmap
 oc delete configmap waiops-hub-configmap -n $NAMESPACE_HUB 
-oc create configmap -n $NAMESPACE_HUB waiops-hub-configmap --from-literal=noiKafkaTopic=$NOI_KAFKA_TOPIC --from-literal=noiKafkaServerUrl=$BROKER --from-literal=noiKafkaTruststoreLocation=/opt/secret-volume/truststore.jks --from-literal=noiKafkaTruststorePassword=$TRUSTSTORE_PASSWORD  --from-literal=noiKafkaSCRAMUserName=$SASL_USERNAME  --from-literal=noiKafkaSCRAMPassword=$SASL_PASSWORD --from-literal=filterSeverityFrom=$FILTER_SEVERITY_FROM  --from-literal=filterSeverityTo=$FILTER_SEVERITY_TO  
+oc create configmap -n $NAMESPACE_HUB waiops-hub-configmap --from-literal=noiKafkaTopic=$NOI_KAFKA_TOPIC --from-literal=noiKafkaServerUrl=$BROKER --from-literal=noiKafkaTruststoreLocation=/opt/secret-volume/truststore.jks --from-literal=noiKafkaTruststorePassword=$TRUSTSTORE_PASSWORD  --from-literal=noiKafkaSCRAMUserName=$SASL_USERNAME  --from-literal=noiKafkaSCRAMPassword=$SASL_PASSWORD --from-literal=filterSeverityEnabled=$FILTER_SEVERITY_ENABLED  --from-literal=filterSeverityFrom=$FILTER_SEVERITY_FROM  --from-literal=filterSeverityTo=$FILTER_SEVERITY_TO  
 
 ### delete the temp files...
 ls -l

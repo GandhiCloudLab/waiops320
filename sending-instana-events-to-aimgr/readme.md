@@ -33,15 +33,19 @@ NOI_KAFKA_TOPIC=cp4waiops-cartridge-alerts-noi-7buu27a3
 ```
 
 
-#### 3. Update FILTER_SEVERITY_FROM and FILTER_SEVERITY_TO property
+#### 3. Update Severity Filter property
 
-Update the below properties to process only the instana events that contains the severity in the below range.
+Update the below property to `true` to apply severity filter.
+```
+FILTER_SEVERITY_ENABLED=false
+```
+
+If the above property is enabled, then update the below properties to process only the instana events that contains the severity in the below range.
 
 ```
 FILTER_SEVERITY_FROM=1
 FILTER_SEVERITY_TO=1000
 ```
-
 
 #### 4. Login into OCP Cluster
 
