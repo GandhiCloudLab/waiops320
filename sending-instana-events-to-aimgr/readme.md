@@ -120,7 +120,8 @@ Put the load in the application to generate the Instana event and see the event 
 
 #### Mapping
 
-<img src="images/1-mapping-open.png">
+<img src="images/open1.png">
+<img src="images/open2.png">
 
 
 ### 3.2 Events Status : Close
@@ -135,7 +136,7 @@ Put the load in the application to generate the Instana event and see the event 
 
 #### Mapping
 
-<img src="images/2-mapping-close.png">
+<img src="images/close.png">
 
 ## 4. NOI Event to Alert Viewer Mapping
 

@@ -19,6 +19,7 @@
       "service": "not available",
       "containerNames": [],
       "customPayloads": {
+        "severity": ["5"],
         "custom:NodeAlias": [
           "ilender-creditscore-54885c6f85-6z4gw"
         ]
