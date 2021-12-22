@@ -138,11 +138,54 @@ Put the load in the application to generate the Instana event and see the event 
 
 <img src="images/close.png">
 
-## 4. NOI Event to Alert Viewer Mapping
+## 4. CustomPayLoad
+
+As mentioned above the Instana event fileds are mapped to NOI events fields. It can be overridden by creating the CustomPayLoad in Instana. The following fields in the NOI events can be overridden by usingCustomPayLoad fields.
+
+```
+custom:Identifier
+custom:EventId
+custom:Node
+custom:NodeAlias
+custom:Manager
+custom:Agent
+custom:Summary
+custom:Summary1
+custom:Summary2
+custom:Summary3
+custom:Summary4
+custom:ENTITYTYPE
+custom:FirstOccurrence
+custom:LastOccurrence
+custom:AlertGroup
+custom:AlertKey
+custom:Type
+custom:Location
+custom:Link
+custom:Severity
+custom:NetcoolEventAction
+```
+
+#### 4.1 Instana Event with CustomPayLoad
+
+- Instana Event :  [files/3-custompayload-instana.json](./files/3-custompayload-instana.json)
+
+- Converted NOI Event :  [files/3-custompayload-noi.json](./files/3-custompayload-noi.json)
+
+#### 4.2 Summary
+
+Normally the `text` field in Instana is mapped `Summary` field in NOI. 
+
+There are three types possible here.
+
+<img src="images/summary.png">
+
+
+## 5. NOI Event to Alert Viewer Mapping
 
 <img src="images/3-mapping-noi-to-alertviewer.png">
 
-## 5. ReInstall and Remove
+## 6. ReInstall and Remove
 
 To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-hub-ns`.
 
@@ -150,7 +193,7 @@ To reinstall or remove this  `WAIOps Hub`, you can delete the namespace `waiops-
 oc delete ns waiops-hub-ns
 ```
 
-## 6. Note
+## 7. Note
 
 This is `WAIOps Hub` is intended for POC.
 

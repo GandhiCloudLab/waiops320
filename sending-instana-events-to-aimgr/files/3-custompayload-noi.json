@@ -1,0 +1,19 @@
+{
+    "Identifier": "_tF_4vySR0iyi8q4lMXnuQ",
+    "EventId": "_tF_4vySR0iyi8q4lMXnuQ",
+    "Node": "myNode",
+    "NodeAlias": "ilender-creditscore-54885c6f85-rzqkh",
+    "Manager": "Instana",
+    "Agent": "ilender-zone",
+    "Summary": "[sum1 ab] [sum2 cd] [sum3 ef] [sum4 gh]",
+    "ENTITYTYPE": "creditscoreservice 0.0.1-SNAPSHOT",
+    "FirstOccurrence": "1640097189",
+    "LastOccurrence": "1640097189",
+    "AlertGroup": "myAlertGroup11",
+    "AlertKey": "myAlertKey1",
+    "Type": 1,
+    "Location": "ilender-zone",
+    "Link": "https://1.1.1.1.nip.io/#/events;eventId=_tF_4vySR0iyi8q4lMXnuQ?&timeline.ws=600000&timeline.to=1640097489000&timeline.fm=1640097189000&incidentId=_tF_4vySR0iyi8q4lMXnuQ&incidentTo=1640097195000",
+    "Severity": 5,
+    "NetcoolEventAction": "insert"
+}
