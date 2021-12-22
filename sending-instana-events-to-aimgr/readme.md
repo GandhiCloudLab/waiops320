@@ -174,9 +174,13 @@ custom:NetcoolEventAction
 
 #### 4.2 Summary
 
-Normally the `text` field in Instana is mapped `Summary` field in NOI. 
+Normally the `text` field in Instana is mapped to `Summary` field in NOI. 
 
 There are three types possible here.
+
+- Type 1: Without CustomPayLoad
+- Type 2: With CustomPayLoad and Summary field
+- Type 3: With CustomPayLoad and Summary1, Summary2, Summary3, Summary4 fields
 
 <img src="images/summary.png">
 
