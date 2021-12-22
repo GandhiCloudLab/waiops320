@@ -138,9 +138,9 @@ Put the load in the application to generate the Instana event and see the event 
 
 <img src="images/close.png">
 
-## 4. CustomPayLoad
+## 4. CustomPayLoads
 
-As mentioned above the Instana event fileds are mapped to NOI events fields. It can be overridden by creating the CustomPayLoad in Instana. The following fields in the NOI events can be overridden by usingCustomPayLoad fields.
+As mentioned above the Instana event fileds are mapped to NOI events fields. It can be overridden by creating the CustomPayLoads in Instana. The following fields in the NOI events can be overridden by usingCustomPayLoads fields.
 
 ```
 custom:Identifier
@@ -166,11 +166,11 @@ custom:Severity
 custom:NetcoolEventAction
 ```
 
-#### 4.1 Instana Event with CustomPayLoad
+#### 4.1 Instana Event with CustomPayLoads
 
-- Instana Event :  [files/3-custompayload-instana.json](./files/3-custompayload-instana.json)
+- Instana Event :  [files/3-CustomPayLoads-instana.json](./files/3-CustomPayLoads-instana.json)
 
-- Converted NOI Event :  [files/3-custompayload-noi.json](./files/3-custompayload-noi.json)
+- Converted NOI Event :  [files/3-CustomPayLoads-noi.json](./files/3-CustomPayLoads-noi.json)
 
 #### 4.2 Summary
 
@@ -178,9 +178,9 @@ Normally the `text` field in Instana is mapped to `Summary` field in NOI.
 
 There are three types possible here.
 
-- Type 1: Without CustomPayLoad
-- Type 2: With CustomPayLoad and Summary field
-- Type 3: With CustomPayLoad and Summary1, Summary2, Summary3, Summary4 fields
+- Type 1: Without CustomPayLoads
+- Type 2: With CustomPayLoads and Summary field
+- Type 3: With CustomPayLoads and Summary1, Summary2, Summary3, Summary4 fields
 
 <img src="images/summary.png">
 
