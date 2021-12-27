@@ -2,7 +2,7 @@
 
 This document helps to install Humio on RedHat Openshift Container Platform.
 
-The application logs are pushed to this Humio instance. The WAIOps pulls logs from the Humio and use it for logs anomaly detection.
+The application logs are pushed to the Humio instance. The WAIOps pulls logs from the Humio and use it for logs anomaly detection.
 
 This is based on RedHat OpenShift 4.8 on IBM Cloud (ROKS).
 
@@ -10,7 +10,7 @@ This is based on RedHat OpenShift 4.8 on IBM Cloud (ROKS).
 
 Humio is installed in OpenShift namespace `humio-ns`.
 
-The installation is done via the script [files/install-humio.sh](./files/install-humio.sh). There is a supporting file [files/values.yaml](./files/values.yaml) is available too.
+The installation is done via the script [files/install-humio.sh](./files/install-humio.sh). There is a supporting file [files/values.yaml](./files/values.yaml) is also available.
 
 Here are the steps to install
 
@@ -25,8 +25,7 @@ oc login ......
 
 #### 2. Goto the files folder
 
-
-Goto the files folder
+Run the below command
 
 ```
 cd files
@@ -45,11 +44,13 @@ sh install-humio.sh
  
 The installation would be completed and the output could be like this.
 
+```
 ================================================================
 Humio URL : http://humio-humio-ns.mycluster-aaaaaa.eu-de.containers.appdomain.cloud/
 Humio User : developer
 Humio Password : humiopassword
 ================================================================
+```
 
 ## 2. Using Humio in WAIOps
 
@@ -57,7 +58,7 @@ Humio Password : humiopassword
 
 2. Goto Account Settings page and get the API Token .
 
-<img src="images/image1`.png">
+<img src="images/image1.png">
 
 ### Humio Connection in WAIOps
 
@@ -84,8 +85,8 @@ http://humio-humio-ns.mycluster-aaaaaa.eu-de.containers.appdomain.cloud/api/v1/r
 
 Enter above retrieved `API Token`
 
-<img src="images/image2`.png">
-<img src="images/image3`.png">
+<img src="images/image2.png">
+<img src="images/image3.png">
 
 
 ### To Ingest logs in Humio
@@ -113,7 +114,7 @@ http://humio-humio-ns.mycluster-aaaaaa.eu-de.containers.appdomain.cloud/api/v1/i
 Copy the API Token from ` SandBox >> Settings >> API Token >> Copy `
 
 
-<img src="images/image4`.png">
+<img src="images/image4.png">
 
 
 ## 3. ReInstall or Remove
