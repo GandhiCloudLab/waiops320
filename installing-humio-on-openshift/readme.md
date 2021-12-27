@@ -4,8 +4,6 @@ This document helps to install Humio on RedHat Openshift Container Platform.
 
 The application logs are pushed to the Humio instance. The WAIOps pulls logs from the Humio and use it for logs anomaly detection.
 
-This is based on RedHat OpenShift 4.8 on IBM Cloud (ROKS).
-
 ## 1. Installation
 
 Humio is installed in OpenShift namespace `humio-ns`.
@@ -17,7 +15,6 @@ Here are the steps to install
 #### 1. Login into OpenShift
 
 Login into OCP using oc login command.
-
 
 ```
 oc login ......
@@ -62,9 +59,9 @@ Humio Password : humiopassword
 
 ### Humio Connection in WAIOps
 
-#### Humio URL
+#### Humio Service URL
 
-Enter `Humio URL` in Humio Integration in WAIOps console. 
+Enter `Humio Service URL` in Humio Integration in WAIOps console. 
 
 Here is the url format.
 ```
@@ -81,7 +78,7 @@ http://1.1.1.1:8080/api/v1/repositories/sandbox/query
 http://humio-humio-ns.mycluster-aaaaaa.eu-de.containers.appdomain.cloud/api/v1/repositories/sandbox/query
 
 
-#### API Token
+#### API Key
 
 Enter above retrieved `API Token`
 
@@ -127,3 +124,7 @@ helm delete humio-instance
 oc delete ns humio-ns
 ```
 `
+
+## 4. Note
+
+This document is based on RedHat OpenShift 4.8 on IBM Cloud (ROKS).
