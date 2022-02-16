@@ -33,6 +33,8 @@ export SASL_PASSWORD=$(oc get secret $SASL_USERNAME  -n $NAMESPACE --template={{
 ### Retrieve Kafka Broker url
 export BROKER=$(oc get routes iaf-system-kafka-bootstrap -n $NAMESPACE -o=jsonpath='{.status.ingress[0].host}{"\n"}'):443
 
+oc get routes iaf-system-kafka-bootstrap -n cp4waiops -o=jsonpath='{.status.ingress[0].host}{"\n"}'
+
 ### Generate jks file
 keytool -import -noprompt -alias alias -file $CRT_FILENAME -keypass wahubkeypass -keystore $JKS_FILENAME -storepass $TRUSTSTORE_PASSWORD
 
