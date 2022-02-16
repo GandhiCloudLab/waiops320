@@ -28,6 +28,12 @@ The article is based on the the following.
 
 As seen in the image, need to add the below values at the license attribute level. ( `metadata`  > `annotations`  >  `alm-examples`  >  `spec`  > `helmValuesASM`  )
 
+```
+  "helmValuesASM": {
+      "global.enableAllRoutes": true"
+  },
+```
+
 4. Wait for 2 minutes, the routes will start getting created.
 
 ## 2. Retrieve Toplogy Manager API access details
