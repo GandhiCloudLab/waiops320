@@ -112,9 +112,12 @@ sh 02-create-topology-links.sh
 
 3. In the toplogy viewer, you can able see the bookinfo topology created using the above scripts.
 
-<img src="images/04-resoure-details.png">
+<img src="images/03-bookinfo-topo.png">
+
 
 4. Click on any Node to see its detail.
+
+<img src="images/04-resoure-details.png">
 
 <img src="images/05-node-properties.png">
 
