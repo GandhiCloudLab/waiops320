@@ -148,11 +148,14 @@ Click on `View topology` in `productpage-svc` node.
 
 <img src="images/10-topo-view-5.png">
 
-6. Now the entire topology bookinfo is displayed.
+6. Now the entire topology bookinfo is displayed with the below style.
 
 <img src="images/10-topo-view-6.png">
 
-7. Right click on any Node and click on `Resource Details` to see its detail.
+7. Show the Node/Resource Details by doing below
+
+- Right click on any Node to the menu
+- Click on the `Resource Details` menu to see its detail
 
 <img src="images/10-topo-view-7.png">
 
@@ -166,7 +169,7 @@ Click on `View topology` in `productpage-svc` node.
 
 ### 4. Retrieve `_id` using `uniqueId`
 
-We create node using the `uniqueId`. But for further actions like create link, delete node and etc requires `_id`. So we can use API to retrive `_id` using `uniqueId`.
+We create node using the `uniqueId`. But for further actions like create link, delete node and etc, it requires `_id`. So we can use API to retrive `_id` using `uniqueId`.
 
 Here is the script to retrive `_id` using `uniqueId`
 
