@@ -5,12 +5,14 @@ This document explains about how to enable and use API service in Agile Service 
 
 Note: API service is not officially supported for production.
 
-The article is based on the the following.
-- RedHat OpenShift 4.8 on IBM Cloud (ROKS)
-- IBM Cloud Pak for Watson AIOps 3.2.0
+The following topics are discussed here.
 
+1. Enabling Toplogy Manager API Route
+2. Retrieve Topology Manager API access details
+3. Swagger UI
+4. Creating Topology for BookInfo App
 
-## 1. Enabling Toplogy Manager API Route
+## 1. Enabling Topology Manager API Route
 
 1. Open the web console of the OCP Cluster where WAIOps AIMgr is installed.
 
@@ -38,7 +40,7 @@ docker run -d -p 8085:8080 somsimulator:latest
 
 4. Wait for 2 minutes, the routes will start getting created.
 
-## 2. Retrieve Toplogy Manager API access details
+## 2. Retrieve Topology Manager API access details
 
 A shell script [files/00-print-topology-url-usr-pwd.sh](./files/00-print-topology-url-usr-pwd.sh) is available to print the url and access details of the Topology API.
 
@@ -78,11 +80,13 @@ TOPO_TENENT_ID=cfd95b7e-3bc7-4006-a4a8-a73a79c71255
 ================================================================
 ```
 
-## 3. Swagger
+## 3. Swagger UI
 
-The swagger url will be printed as part of the above script. The `TOPO_API_URL_SWAGGER` url to be used for login into swagger.
+The Swagger UI url will be printed as part of the above script. The `TOPO_API_URL_SWAGGER` url to be used to open the Swagger UI.
 
-User, Password and TenantId fields would be used for using swgger web console.
+The above printed User, Password and TenantId fields would be used in Swagger UI.
+
+Swagger UI allows anyone to visualize and interact with the API’s resources. 
 
 ## 4. Creating Topology for BookInfo App
 
@@ -140,5 +144,8 @@ getResourceIdByUniqueId ---> reviews-svc-id ==> xizKZpDlTNmBXUgDeBcN0g
 getResourceIdByUniqueId ---> ratings-svc-id ==> LuR8kuOnTSSmZHqVjSdZEA
 ```
 
+## Note :
 
-
+The article is based on the the following.
+- RedHat OpenShift 4.8 on IBM Cloud (ROKS)
+- IBM Cloud Pak for Watson AIOps 3.2.0
